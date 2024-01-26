@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  *
  */
 @Component
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked", "unused"})
 public class AppMapper {
     private static final String DTO_PACKAGE = "at.altin.hammerio.dto.";
     private static final String ENTITY_PACKAGE = "at.altin.hammerio.entity.";

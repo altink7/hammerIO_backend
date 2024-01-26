@@ -9,4 +9,5 @@ public class HammerDTO {
     private long id;
     private String bezeichnung;
     private BigDecimal preis;
+    private int quality;
 }

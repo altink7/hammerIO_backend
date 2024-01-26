@@ -3,7 +3,6 @@ package at.altin.hammerio.controller;
 import at.altin.hammerio.config.mapper.AppMapper;
 import at.altin.hammerio.dto.HammerDTO;
 import at.altin.hammerio.entity.Hammer;
-import at.altin.hammerio.config.mapper.ModelMapperConfig;
 import at.altin.hammerio.service.HammerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

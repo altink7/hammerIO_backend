@@ -1,6 +1,5 @@
 package at.altin.hammerio.controller;
 
-import at.altin.hammerio.dto.HammerDTO;
 import at.altin.hammerio.entity.Hammer;
 import at.altin.hammerio.mapper.AppModelMapper;
 import at.altin.hammerio.service.HammerService;

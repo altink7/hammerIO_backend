@@ -1,11 +1,11 @@
-package at.altin.hammerio.mapper;
+package at.altin.hammerio.config.mapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AppModelMapper {
+public class ModelMapperConfig {
 
     @Bean
     public ModelMapper modelMapper() {

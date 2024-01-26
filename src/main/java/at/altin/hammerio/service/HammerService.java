@@ -9,6 +9,7 @@ import java.util.List;
 @Service
 public class HammerService {
 
+    // nur als Beispiel, spaeter wird das aus der DB kommen
     private static List<Hammer> allHammers =
             List.of(
                     new Hammer(1L, "hammerA", BigDecimal.TEN),
@@ -20,9 +21,13 @@ public class HammerService {
         return allHammers;
     }
 
-    // check this
+
     public boolean addHammer(Hammer hammer) {
-        allHammers.add(hammer != null ? hammer : new Hammer());
+        if (hammer == null){
+            return false;
+        }
+
+        allHammers.add(hammer);
         return true;
     }
 
@@ -32,6 +37,4 @@ public class HammerService {
                 .findFirst()
                 .orElse(null);
     }
-
-
 }

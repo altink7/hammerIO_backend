@@ -4,17 +4,20 @@ import at.altin.hammerio.entity.Hammer;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class HammerService {
 
     // nur als Beispiel, spaeter wird das aus der DB kommen
-    private static List<Hammer> allHammers =
-            List.of(
+    private static List<Hammer> allHammers = new ArrayList<>(
+            Arrays.asList(
                     new Hammer(1L, "hammerA", BigDecimal.TEN),
                     new Hammer(2L, "hammerB", BigDecimal.ONE)
-            );
+            )
+    );
 
 
     public List<Hammer> getAllHammers() {

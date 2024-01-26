@@ -39,7 +39,7 @@ public class HammerController {
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public boolean addHammer(HammerDTO hammer) {
+    public boolean addHammer(@RequestBody HammerDTO hammer) {
         Hammer hammerEntity = appMapper.mapToEntity(hammer);
 
         return hammerService.addHammer(hammerEntity);

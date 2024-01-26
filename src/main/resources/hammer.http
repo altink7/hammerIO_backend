@@ -10,10 +10,7 @@ POST http://localhost:8080/api/hammer/create
 Content-Type: application/json
 
 {
-  "id": 1,
-  "bezeichnung": "Hammer",
-  "preis": 10.0,
-  "quality": 1,
-  "color": "RED",
-  "ipSchutz": 67
+  "id":10,
+  "bezeichnung":"hammerA",
+  "preis":10
 }

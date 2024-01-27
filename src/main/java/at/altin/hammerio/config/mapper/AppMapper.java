@@ -35,7 +35,7 @@ public class AppMapper {
         return appModelMapper.modelMapper().map(source, targetClass);
     }
 
-    public <E, DTO> DTO mapToDTO(E source, Class<DTO> targetClass) {;
+    public <E, DTO> DTO mapToDTO(E source, Class<DTO> targetClass) {
         return appModelMapper.modelMapper().map(source, targetClass);
     }
 

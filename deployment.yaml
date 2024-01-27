@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hammerio-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hammerio
+  template:
+    metadata:
+      labels:
+        app: hammerio
+    spec:
+      containers:
+        - name: hammerio
+          image: altinkelmendi/hammerio:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080

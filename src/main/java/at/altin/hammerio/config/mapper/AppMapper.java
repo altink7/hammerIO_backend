@@ -19,19 +19,23 @@ public class AppMapper {
     private static final String ENTITY_PACKAGE = "at.altin.hammerio.entity.";
     ModelMapperConfig appModelMapper;
 
-
     public AppMapper(ModelMapperConfig appModelMapper) {
         this.appModelMapper = appModelMapper;
     }
 
-
     public <DTO, E> E mapToEntity(DTO source) {
-        Class<E> targetClass = getTargetClassForEntity(source);
-        return appModelMapper.modelMapper().map(source, targetClass);
+        return mapToEntity(source, getTargetClassForEntity(source));
     }
 
     public <E, DTO> DTO mapToDTO(E source) {
-        Class<DTO> targetClass = getTargetClassForDTO(source);
+        return mapToDTO(source, getTargetClassForDTO(source));
+    }
+
+    public <DTO, E> E mapToEntity(DTO source, Class<E> targetClass) {
+        return appModelMapper.modelMapper().map(source, targetClass);
+    }
+
+    public <E, DTO> DTO mapToDTO(E source, Class<DTO> targetClass) {;
         return appModelMapper.modelMapper().map(source, targetClass);
     }
 

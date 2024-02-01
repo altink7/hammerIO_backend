@@ -11,6 +11,6 @@ Content-Type: application/json
 
 {
   "id":10,
-  "bezeichnung":"hammerA",
-  "preis":10
+  "bezeichnung":"01/02/2024",
+  "preis":3.99
 }

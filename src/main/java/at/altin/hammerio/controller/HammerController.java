@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("api/hammer")
@@ -30,7 +31,7 @@ public class HammerController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<HammerDTO> getHammerById(@PathVariable long id) {
+    public ResponseEntity<HammerDTO> getHammerById(@PathVariable UUID id) {
         HammerDTO hammerDTO = appMapper.mapToDTO(hammerService.getHammerById(id));
 
         return ResponseEntity.ok(hammerDTO);
